@@ -152,3 +152,7 @@ requirements.backup
 # 日志文件
 *.log
 logs/
+
+# Gradio
+.gradio/
+flagged/
