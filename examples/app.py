@@ -1,0 +1,65 @@
+"""
+Gradio 应用示例
+
+启动方式：
+    python examples/app.py
+
+或者从项目根目录：
+    python -m examples.app
+"""
+
+import gradio as gr
+
+
+def greet(name: str, intensity: int = 1) -> str:
+    """简单的问候函数"""
+    return f"Hello, {name}! " + "🎉" * intensity
+
+
+# 创建 Gradio 界面
+with gr.Blocks() as demo:
+    gr.Markdown("# Gradio Droplet 示例应用")
+    gr.Markdown("这是一个简单的 Gradio 应用示例")
+
+    with gr.Row():
+        with gr.Column():
+            name_input = gr.Textbox(
+                label="输入你的名字",
+                placeholder="请输入名字...",
+                value="World"
+            )
+            intensity_slider = gr.Slider(
+                minimum=1,
+                maximum=5,
+                value=1,
+                step=1,
+                label="热情程度"
+            )
+            submit_btn = gr.Button("提交", variant="primary")
+
+        with gr.Column():
+            output = gr.Textbox(label="问候语", interactive=False)
+
+    # 绑定事件
+    submit_btn.click(
+        fn=greet,
+        inputs=[name_input, intensity_slider],
+        outputs=output
+    )
+
+    # 也可以在输入时实时更新
+    name_input.change(
+        fn=greet,
+        inputs=[name_input, intensity_slider],
+        outputs=output
+    )
+
+
+# 启动应用
+if __name__ == "__main__":
+    demo.launch(
+        server_name="0.0.0.0",  # 允许外部访问
+        server_port=7860,        # 端口号
+        share=False,             # 是否创建公共分享链接
+        debug=True               # 开启调试模式
+    )
