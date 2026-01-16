@@ -12,3 +12,8 @@ pytest-cov==7.0.0      # 测试覆盖率工具，检查代码被测试覆盖的�
 black==25.12.0         # 代码格式化工具，自动统一代码风格
 flake8==7.3.0          # 代码检查工具，发现语法错误和不规范的代码
 mypy==1.19.1           # 静态类型检查工具，检查类型注解是否正确
+isort==5.13.2          # Python import 排序工具
+
+# Git 和 Commit 工具
+pre-commit==4.0.1      # Git hooks 管理工具，自动运行代码检查
+commitizen==3.29.1     # Commit 消息规范工具，强制使用 Conventional Commits

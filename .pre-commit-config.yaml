@@ -32,7 +32,7 @@ repos:
     rev: 25.1.0
     hooks:
       - id: black
-        language_version: python3.10
+        language_version: python3  # 使用系统默认 Python 3 版本
 
   # Python 代码检查
   - repo: https://github.com/pycqa/flake8

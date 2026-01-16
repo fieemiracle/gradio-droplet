@@ -1,0 +1,42 @@
+# <type>: <subject>
+#
+# <body>
+#
+# <footer>
+
+# ==================== Type 类型 ====================
+# feat:     新功能
+# fix:      Bug 修复
+# docs:     文档更新
+# style:    代码格式（不影响功能）
+# refactor: 重构
+# perf:     性能优化
+# test:     测试
+# build:    构建系统或依赖
+# ci:       CI/CD 配置
+# chore:    其他杂项
+# revert:   回滚提交
+
+# ==================== Subject 规则 ====================
+# - 使用祈使句，现在时态："add" 而不是 "added"
+# - 不要大写首字母
+# - 不要以句号结尾
+# - 简洁明了，不超过 50 个字符
+
+# ==================== 示例 ====================
+# feat: add user authentication
+# fix: resolve login button crash
+# docs: update README installation steps
+# style: format code with black
+# refactor: simplify database query logic
+# test: add unit tests for user service
+# chore: update dependencies
+
+# ==================== Body 规则 ====================
+# - 解释"是什么"和"为什么"，而不是"怎么做"
+# - 每行不超过 72 个字符
+# - 可以包含多个段落
+
+# ==================== Footer 规则 ====================
+# - 引用 issue: Closes #123, Fixes #456
+# - Breaking changes: BREAKING CHANGE: description

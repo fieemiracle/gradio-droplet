@@ -138,3 +138,17 @@ Thumbs.db
 # direnv
 .envrc.local
 .direnv/
+
+# Pre-commit
+.pre-commit-cache/
+
+# 临时文件和备份
+*.backup
+requirements.backup
+*.bak
+*.tmp
+*.temp
+
+# 日志文件
+*.log
+logs/
