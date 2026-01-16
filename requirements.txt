@@ -1,4 +1,16 @@
 # 生产依赖文件
 # 安装方式: pip install -r requirements.txt
+#
+# 版本说明:
+# - gradio==6.3.0  表示精确版本（锁定）
+# - gradio>=6.3.0  表示最小版本（灵活）
+#
+# 查看当前安装的版本:
+#   pip show gradio
+#   pip list | grep gradio
+#
+# 生成精确版本锁定文件:
+#   pip freeze > requirements.lock
 
-gradio>=4.0.0
+# 主要依赖
+gradio==6.3.0
