@@ -9,5 +9,5 @@ demo = gr.Interface(
     fn=greet, inputs=["text", "slider"], outputs="text", api_name="predict"
 )
 
-# demo.launch()
-demo.launch(share=True)
+if __name__ == "__main__":
+    demo.launch(share=True)
